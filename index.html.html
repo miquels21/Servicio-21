@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVICIO 21 - Servicios Generales</title>
+    
+    <!-- Tailwind CSS para los estilos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons para los iconos -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Configuración personalizada de colores de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Desplazamiento suave al hacer clic en los enlaces del menú */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Barra de Navegación (Header) -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <span class="bg-brand-600 text-white font-black px-2 py-1 rounded-md mr-2 text-lg">S21</span>
+                    <span class="font-bold text-xl tracking-tight text-brand-900">SERVICIO 21</span>
+                </div>
+                
+                <!-- Menú de Escritorio -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-brand-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Inicio</a>
+                    <a href="#nosotros" class="text-gray-600 hover:text-brand-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Nosotros</a>
+                    <a href="#servicios" class="text-gray-600 hover:text-brand-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Servicios</a>
+                    <a href="#contacto" class="text-gray-600 hover:text-brand-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contacto</a>
+                </nav>
+                
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-600 focus:outline-none p-2">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50">Inicio</a>
+                <a href="#nosotros" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50">Nosotros</a>
+                <a href="#servicios" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50">Servicios</a>
+                <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        
+        <!-- Sección Hero -->
+        <section id="inicio" class="bg-brand-50 py-20 lg:py-32 text-center px-4">
+            <div class="max-w-6xl mx-auto">
+                <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl mb-6">
+                    <span class="block">Soluciones integrales con</span>
+                    <span class="block text-brand-600">SERVICIO 21</span>
+                </h1>
+                <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl mb-8">
+                    Empresa líder en prestación de servicios generales. Calidad, confianza y compromiso en cada solución corporativa.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://wa.me/51944933300" target="_blank" class="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-green-600 hover:bg-green-700 shadow-lg transition-all">
+                        <i data-lucide="message-circle" class="mr-2 w-5 h-5"></i> WhatsApp
+                    </a>
+                    <a href="#servicios" class="px-8 py-3 border-2 border-brand-200 text-base font-medium rounded-full text-brand-700 bg-white hover:bg-brand-100 transition-all">
+                        Ver Servicios
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Nosotros (Misión, Visión y Valores) -->
+        <section id="nosotros" class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Misión y Visión -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 group hover:border-brand-300 transition-colors">
+                        <h2 class="text-2xl font-bold text-brand-900 mb-4 flex items-center">
+                            <i data-lucide="target" class="w-6 h-6 mr-3 text-brand-600"></i>
+                            Misión
+                        </h2>
+                        <p class="text-gray-600 leading-relaxed italic">
+                            "Ofrecer el mejor servicio general de acuerdo a las necesidades y demandas de nuestros clientes."
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 group hover:border-brand-300 transition-colors">
+                        <h2 class="text-2xl font-bold text-brand-900 mb-4 flex items-center">
+                            <i data-lucide="eye" class="w-6 h-6 mr-3 text-brand-600"></i>
+                            Visión
+                        </h2>
+                        <p class="text-gray-600 leading-relaxed italic">
+                            "Ser una de las primeras opciones como empresa de prestación de servicios generales a nivel local."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Valores Corporativos -->
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-extrabold text-gray-900">Nuestros Valores</h2>
+                    <div class="h-1 w-20 bg-brand-600 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm text-center hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="users-2"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 uppercase tracking-wider text-sm">Trabajo en Equipo</h3>
+                    </div>
+                    <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm text-center hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 uppercase tracking-wider text-sm">Honestidad</h3>
+                    </div>
+                    <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm text-center hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="heart-handshake"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 uppercase tracking-wider text-sm">Responsabilidad Social</h3>
+                    </div>
+                    <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm text-center hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="award"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 uppercase tracking-wider text-sm">Integridad</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Servicios -->
+        <section id="servicios" class="py-20 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-base text-brand-600 font-semibold tracking-wide uppercase">Servicios Especializados</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        Soluciones para cada sector
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col items-center text-center">
+                        <div class="w-14 h-14 inline-flex items-center justify-center rounded-xl bg-brand-100 text-brand-600 mb-6">
+                            <i data-lucide="briefcase" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Eventos Corporativos</h3>
+                        <p class="text-gray-600 text-sm">Contratación y logística para eventos empresariales de primer nivel.</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col items-center text-center">
+                        <div class="w-14 h-14 inline-flex items-center justify-center rounded-xl bg-brand-100 text-brand-600 mb-6">
+                            <i data-lucide="sparkle" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Limpieza</h3>
+                        <p class="text-gray-600 text-sm">Personal capacitado para mantenimiento de oficinas y plantas industriales.</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col items-center text-center">
+                        <div class="w-14 h-14 inline-flex items-center justify-center rounded-xl bg-brand-100 text-brand-600 mb-6">
+                            <i data-lucide="gift" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Merchandising</h3>
+                        <p class="text-gray-600 text-sm">Artículos promocionales de alta calidad para posicionar su marca.</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col items-center text-center">
+                        <div class="w-14 h-14 inline-flex items-center justify-center rounded-xl bg-brand-100 text-brand-600 mb-6">
+                            <i data-lucide="radio" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Publicidad</h3>
+                        <p class="text-gray-600 text-sm">Campañas creativas y gestión de pauta para maximizar su alcance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto Mejorada -->
+        <section id="contacto" class="py-20 bg-gray-900 text-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Información de Contacto -->
+                    <div class="flex flex-col justify-center">
+                        <h2 class="text-3xl font-extrabold sm:text-4xl mb-6">¿Cómo podemos ayudarte?</h2>
+                        <p class="text-xl text-gray-400 mb-10">Solicita un presupuesto o consulta sobre nuestros servicios generales.</p>
+                        
+                        <div class="space-y-6">
+                            <a href="https://wa.me/51944933300" target="_blank" class="flex items-center group">
+                                <div class="w-12 h-12 bg-green-600/20 text-green-500 rounded-full flex items-center justify-center mr-4 group-hover:bg-green-600 group-hover:text-white transition-all">
+                                    <i data-lucide="message-circle"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">WhatsApp</p>
+                                    <p class="text-lg font-semibold">+51 944 933 300</p>
+                                </div>
+                            </a>
+
+                            <a href="mailto:proservice21@outlook.com" class="flex items-center group">
+                                <div class="w-12 h-12 bg-brand-600/20 text-brand-500 rounded-full flex items-center justify-center mr-4 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Correo Electrónico</p>
+                                    <p class="text-lg font-semibold">proservice21@outlook.com</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Formulario -->
+                    <div class="bg-white rounded-3xl p-8 shadow-2xl text-gray-900">
+                        <h3 class="text-xl font-bold mb-6">Envíanos un mensaje</h3>
+                        <form onsubmit="event.preventDefault();">
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium mb-1">Nombre Completo</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 outline-none" placeholder="Ingresa tu nombre" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium mb-1">Email</label>
+                                <input type="email" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 outline-none" placeholder="tu@correo.com" required>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium mb-1">Servicio</label>
+                                <select class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 outline-none appearance-none">
+                                    <option>Eventos Corporativos</option>
+                                    <option>Personal de Limpieza</option>
+                                    <option>Merchandising</option>
+                                    <option>Publicidad</option>
+                                </select>
+                            </div>
+                            <button class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 rounded-xl shadow-lg transition-all transform active:scale-95">
+                                Enviar Solicitud
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-950 text-gray-400 py-12 border-t border-gray-900">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-6 md:mb-0">
+                <div class="flex items-center justify-center md:justify-start mb-2">
+                    <span class="bg-brand-600 text-white font-black px-2 py-1 rounded-md mr-2 text-sm">S21</span>
+                    <span class="font-bold text-xl text-white tracking-tight">SERVICIO 21</span>
+                </div>
+                <p class="text-sm max-w-xs">Excelencia en servicios generales para el sector corporativo y local.</p>
+            </div>
+            
+            <div class="text-sm">
+                <p>&copy; <span id="year"></span> SERVICIO 21. Todos los derechos reservados.</p>
+                <div class="mt-2 flex justify-center md:justify-end space-x-4">
+                    <a href="#" class="hover:text-white"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
